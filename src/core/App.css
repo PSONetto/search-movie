@@ -1,0 +1,57 @@
+:root {
+    --bg-from-color: rgba(235, 235, 235, 1);
+    --bg-to-color: rgba(176, 196, 222, 1);
+    --text-color: rgb(51, 51, 51);
+
+    --search-height: 50px;
+}
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+        var(--search-height) 1fr;
+    grid-template-areas:
+        "searchBar"
+        "main";
+    height: 100%;
+    background: var(--bg-from-color);
+    background: linear-gradient(118deg, var(--bg-from-color) 8%, var(--bg-to-color) 43%);
+}
+
+input.search {
+    grid-area: searchBar;
+}
+
+main.content {
+    grid-area: main;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+h1.title {
+    margin: 0px;
+}
+
+p.year {
+    font-size: 1.4em;
+    margin: 0px 0px 5px 0px;
+}
+
+p.type {
+    font-size: 1.1em;
+    margin: 2px 0px;
+}
+
+p.imdb {
+    font-size: 1.1em;
+    margin: 2px 0px;
+}
