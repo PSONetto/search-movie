@@ -1,19 +1,39 @@
 import React from "react";
 import './Detail.css'
 import { useParams, Link } from "react-router-dom";
-import { movieDetail } from "../api/movieDB"
-import Table from "./Table";
-
-function getMovie(id) {
-    return movieDetail.find(
-        (element) => element.imdbID === id
-    );
-}
+import Table from "../components/Table";
+import { useEffect, useState } from "react";
 
 export default function Detail() {
     let params = useParams();
     let movie
 
+    const [detailData, setdetailData] = useState([])
+
+    function getMovie(id) {
+        return detailData.find(
+            (element) => element.imdbID === id
+        );
+    }
+
+    const getDeatil = () => {
+        fetch('http://localhost:3000/details.json', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(function (response) {
+            console.log(response)
+            return response.json();
+        }).then(function (myJson) {
+            setdetailData(myJson)
+        })
+    }
+
+    useEffect(() => {
+        getDeatil()
+    })
+    
     try {
         movie = getMovie(params.id);
         return (

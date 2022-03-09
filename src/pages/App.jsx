@@ -1,11 +1,28 @@
 import './App.css'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { search } from '../api/movieDB'
+import React, { useEffect, useState } from 'react'
 import Content from '../components/Content'
 
 export default function App() {
     const [query, setQuery] = useState("")
+    const [movieData, setMovieData] = useState([])
+
+    const getMovie = () => {
+        fetch('movie.json', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(function (response) {
+            console.log(response)
+            return response.json();
+        }).then(function (myJson) {
+            setMovieData(myJson)
+        })
+    }
+
+    useEffect(() => {
+        getMovie()
+    })
 
     return (
         <div className="app">
@@ -13,7 +30,7 @@ export default function App() {
                 value={query}
                 onChange={search => setQuery(search.target.value)} />
             <main className="content">
-                {search.filter(e => {
+                {movieData.filter(e => {
                     if (!query) {
                         return e
                     } else if (e.Title.toLowerCase().includes(query.toLowerCase())) {
