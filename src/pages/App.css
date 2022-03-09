@@ -2,6 +2,7 @@
     --bg-from-color: rgba(235, 235, 235, 1);
     --bg-to-color: rgba(176, 196, 222, 1);
     --text-color: rgb(51, 51, 51);
+    --hover-color: rgb(100, 100, 100);
 
     --search-height: 50px;
 }
@@ -22,36 +23,14 @@
 
 input.search {
     grid-area: searchBar;
+    margin: 10px 30px;
 }
 
 main.content {
     grid-area: main;
-}
-
-.content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-color);
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px;
 }
 
-h1.title {
-    margin: 0px;
-}
-
-p.year {
-    font-size: 1.4em;
-    margin: 0px 0px 5px 0px;
-}
-
-p.type {
-    font-size: 1.1em;
-    margin: 2px 0px;
-}
-
-p.imdb {
-    font-size: 1.1em;
-    margin: 2px 0px;
-}

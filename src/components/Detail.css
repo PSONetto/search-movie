@@ -1,0 +1,49 @@
+main.detailed-content {
+    margin: 0px;
+    background: var(--bg-from-color);
+    background: linear-gradient(118deg, var(--bg-from-color) 8%, var(--bg-to-color) 43%);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "presentation info";
+}
+
+div.presentation {
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: presentation;
+    margin: 20px;
+}
+
+div.name-plate {
+    text-align: center;
+}
+
+div.name-plate h1, h2 {
+    margin: 0px;
+}
+
+div.info {
+    grid-area: info;
+}
+
+.no-data {
+    background: var(--bg-from-color);
+    background: linear-gradient(118deg, var(--bg-from-color) 8%, var(--bg-to-color) 43%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+
+.no-data h1 {
+    margin: 20px 0px 10px 0px;
+}
+
+.return-no-data {
+    font-size: 1.5em;
+}

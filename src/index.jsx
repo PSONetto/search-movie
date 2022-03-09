@@ -2,15 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import App from './core/App'
-import Details from './core/Details'
-import Detail from './core/Detail'
+import App from './pages/App'
+import Details from './components/Details'
+import Detail from './components/Detail'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,11 +14,9 @@ ReactDOM.render(
         <Route element={<App />} path="/" exact />
         <Route element={<Details />} path="/details" />
         <Route element={<Detail />} path="/details/:id" />
-        <Route
-            path="*"
-            element={
+        <Route path="*" element={
                 <main>
-                    <p>Nothing Found</p>
+                    <p>Error 404</p>
                 </main>
             }
         />
