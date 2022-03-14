@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --bg-from-color: rgba(235, 235, 235, 1);
+  --bg-to-color: rgba(176, 196, 222, 1);
+
+  --dark: rgb(51, 51, 51);
+  --light: rgb(245, 245, 245);
+  --hover-color: rgb(100, 100, 100);
+
+  --search-bar-height: 50px;
+  --header-height: 50px;
+  --footer-height: 50px;
+  --view-port: calc(100vh - (var(--header-height) + var(--footer-height)));
+}
+
+#root {
+  margin: 0px;
+  color: var(--dark);
+  background: var(--bg-from-color);
+  background: linear-gradient(118deg, var(--bg-from-color) 8%, var(--bg-to-color) 43%);
+}
+
+a:link, a:visited {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+a:hover, a:active {
+  background-color: var(--hover-color);
+}

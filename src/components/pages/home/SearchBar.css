@@ -1,0 +1,13 @@
+.search-bar {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    width: 75%;
+    height: var(--search-bar-height);
+    font-size: 1.3em;
+    border-radius: 10px;
+}

@@ -1,0 +1,16 @@
+.poster {
+    background-color: var(--light);
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1, h2 {
+    margin: 0px;
+}

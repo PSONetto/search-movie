@@ -1,0 +1,6 @@
+.home {
+    min-height: var(--view-port);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,50 @@
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "general general"
+        "plot plot"
+        "ratings others";
+    margin: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.general {
+    background-color: var(--light);
+    list-style-type: none;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+    margin: 10px;
+    grid-area: general;
+}
+
+.plot {
+    background-color: var(--light);
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+    margin: 10px;
+    grid-area: plot;
+}
+
+.ratings {
+    background-color: var(--light);
+    list-style-type: none;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+    margin: 10px;
+    grid-area: ratings;
+}
+
+.others {
+    background-color: var(--light);
+    list-style-type: none;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+    margin: 10px;
+    grid-area: others;
+}
+
+li {
+    margin: 1px;
+}
